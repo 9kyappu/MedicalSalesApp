@@ -1,4 +1,4 @@
-﻿using ManageStaffDBApp.Model;
+﻿using MedicalSalesApp.Model;
 using Microsoft.EntityFrameworkCore;
 
 namespace MedicalSalesApp.Model.Data
@@ -9,6 +9,7 @@ namespace MedicalSalesApp.Model.Data
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<MedicineOrder> MedicineOrders { get; set; }
 
         public ApplicationContext()
         {
@@ -16,7 +17,7 @@ namespace MedicalSalesApp.Model.Data
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=MedicalSalesAppDB;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=MedicalSalesAppDB2;Trusted_Connection=True;");
         }
     }
 }

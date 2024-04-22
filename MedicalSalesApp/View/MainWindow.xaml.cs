@@ -21,10 +21,20 @@ namespace MedicalSalesApp.View
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static ListView AllCustomersView;
+        public static ListView AllMedicineOrdersView;
+        public static ListView AllOrdersView;
+        public static ListView AllMedicinesView;
+        public static ListView AllSuppliersView;
         public MainWindow()
         {
             InitializeComponent();
             DataContext = new DataManageVM();
+            AllCustomersView = ViewAllCustomers;
+            AllMedicinesView = ViewAllMedicines;
+            AllMedicineOrdersView = ViewAllMedicineOrders;
+            AllOrdersView = ViewAllOrders;
+            AllSuppliersView = ViewAllSuppliers;
         }
     }
 }

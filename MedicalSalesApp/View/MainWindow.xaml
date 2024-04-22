@@ -96,7 +96,6 @@
                 </TabItem.Header>
                 <TabItem.ContextMenu>
                     <ContextMenu>
-                        <MenuItem Header="Редактировать" Command="{Binding OpenEditItemWnd}"/>
                         <MenuItem Header="Удалить" Command="{Binding DeleteItem}"/>
                     </ContextMenu>
                 </TabItem.ContextMenu>
@@ -112,7 +111,7 @@
                     </ListView.View>
                 </ListView>
             </TabItem>
-            <TabItem Name="SuppliersOrdersTab">
+            <TabItem Name="SuppliersTab">
                 <TabItem.Header>
                     <TextBlock Text="Изготовители"/>
                 </TabItem.Header>
@@ -124,30 +123,32 @@
                 </TabItem.ContextMenu>
                 <ListView x:Name="ViewAllSuppliers" ItemsSource="{Binding AllSuppliers}"
                           SelectedItem="{Binding SelectedSupplier}">
-                    <GridView>
-                        <GridViewColumn Header="Название"
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Название"
                                         DisplayMemberBinding="{Binding Path=Name}"/>
-                        <GridViewColumn Header="Телефон"
+                            <GridViewColumn Header="Телефон"
                                         DisplayMemberBinding="{Binding Path=Phone}"/>
-                        <GridViewColumn Header="Адрес"
+                            <GridViewColumn Header="Адрес"
                                         DisplayMemberBinding="{Binding Path=Address}"/>
-                        <GridViewColumn Header="Email"
+                            <GridViewColumn Header="Email"
                                         DisplayMemberBinding="{Binding Path=Email}"/>
-                    </GridView>
+                        </GridView>
+                    </ListView.View>
                 </ListView>
             </TabItem>
         </TabControl>
         <StackPanel Grid.Row="1" Orientation="Horizontal"
                     HorizontalAlignment="Center">
-            <Button Content="Новый покупатель" Command="{Binding AddNewCustomerWindow}"
+            <Button Content="Новый покупатель" Command="{Binding OpenAddNewCustomerWnd}"
                     Margin="20,10,20,10"/>
-            <Button Content="Новый препарат" Command="{Binding AddNewMedicineWindow}"
+            <Button Content="Новый препарат" Command="{Binding OpenAddNewMedicineWnd}"
                     Margin="20,10,20,10"/>
-            <Button Content="Новый заказ" Command="{Binding AddNewOrderWindow}"
+            <Button Content="Новый заказ" Command="{Binding OpenAddNewOrderWnd}"
                     Margin="20,10,20,10"/>
-            <Button Content="Добавить препараты в заказ" Command="{Binding AddNewMedicineOrderWindow}"
+            <Button Content="Добавить препараты в заказ" Command="{Binding OpenAddNewMedicineOrderWnd}"
                     Margin="20,10,20,10"/>
-            <Button Content="Новый изготовитель" Command="{Binding AddNewSupplierWindow}"
+            <Button Content="Новый изготовитель" Command="{Binding OpenAddNewSupplierWnd}"
                     Margin="20,10,20,10"/>
         </StackPanel>
     </Grid>

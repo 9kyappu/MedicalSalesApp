@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MedicalSalesApp.View"
         mc:Ignorable="d"
-        Title="AddNewMedicineWindow" Height="450" Width="800">
+        Title="Добавление препарата" Height="300" Width="300">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Width="200">
+            <TextBlock Text="Название препарата"/>
+            <TextBox Name="NameBlock" Text="{Binding MedicineName}"/>
+            <TextBlock Text="Дозировка"/>
+            <TextBox Name="DosageBlock" Text="{Binding MedicineDosage}"/>
+            <TextBlock Text="Страна изготовитель"/>
+            <TextBox Name="MotherlandBlock" Text="{Binding MedicineMotherland}"/>
+            <TextBlock Text="Цена"/>
+            <TextBox Name="PriceBlock" Text="{Binding MedicinePrice}"/>
+            <TextBlock Text="Изготовитель"/>
+            <ComboBox ItemsSource="{Binding AllSuppliers}"
+                      DisplayMemberPath="Name"
+                      SelectedItem="{Binding MedicineSupplier}"/>
+        </StackPanel>
+        <Button Grid.Row="1" Content="Добавить препарат" Command="{Binding AddNewMedicine}"
+                CommandParameter="{Binding ElementName=AddNewMedicineWnd}"/>
     </Grid>
 </Window>

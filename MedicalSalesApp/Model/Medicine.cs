@@ -4,7 +4,7 @@ using System.Linq;
 using MedicalSalesApp.Model;
 using Microsoft.VisualBasic.ApplicationServices;
 
-namespace ManageStaffDBApp.Model
+namespace MedicalSalesApp.Model
 {
     public class Medicine
     {
@@ -14,7 +14,7 @@ namespace ManageStaffDBApp.Model
         public string Motherland { get; set; }
         public decimal Price { get; set; }
 
-        public int SupplinerId { get; set; }
+        public int SupplierId { get; set; }
         public virtual Supplier Supplier { get; set; }
 
 
