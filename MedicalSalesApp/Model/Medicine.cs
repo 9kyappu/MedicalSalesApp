@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using MedicalSalesApp.Model;
 using Microsoft.VisualBasic.ApplicationServices;
+using System.Data;
 
 namespace MedicalSalesApp.Model
 {
@@ -17,7 +18,13 @@ namespace MedicalSalesApp.Model
         public int SupplierId { get; set; }
         public virtual Supplier Supplier { get; set; }
 
-
-        public ICollection<Order> Orders { get; set; }
+        [NotMapped]
+        public Supplier MedicineSupplier
+        {
+            get
+            {
+                return DataWorker.GetSupplierById(SupplierId);
+            }
+        }
     }
 }

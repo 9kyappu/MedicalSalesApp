@@ -1,4 +1,5 @@
 ﻿using MedicalSalesApp.ViewModel;
+using System;
 using System.Windows;
 
 namespace MedicalSalesApp.View
@@ -13,5 +14,6 @@ namespace MedicalSalesApp.View
             InitializeComponent();
             DataContext = new DataManageVM();
         }
+        public DateTime SelectedDate { get; set; }
     }
 }

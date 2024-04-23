@@ -34,13 +34,22 @@ namespace MedicalSalesApp.Model
                 var result = db.Orders.ToList();
                 return result;
             }
-        }        
+        }
         //получить все препараты
         public static List<Medicine> GetAllMedicines()
         {
             using (ApplicationContext db = new ApplicationContext())
             {
                 var result = db.Medicines.ToList();
+                return result;
+            }
+        }        
+        //получить все препараты в заказах
+        public static List<MedicineOrder> GetAllMedicineOrders()
+        {
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                var result = db.MedicineOrders.ToList();
                 return result;
             }
         }

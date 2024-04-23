@@ -55,13 +55,13 @@
                             <GridViewColumn Header="Название"
                                             DisplayMemberBinding="{Binding Path=Name}"/>
                             <GridViewColumn Header="Дозировка"
-                                            DisplayMemberBinding="{Binding Path=Doosage}"/>
+                                            DisplayMemberBinding="{Binding Path=Dosage}"/>
                             <GridViewColumn Header="Страна изготовитель"
                                             DisplayMemberBinding="{Binding Path=Motherland}"/>
                             <GridViewColumn Header="Цена"
                                             DisplayMemberBinding="{Binding Path=Price}"/>
                             <GridViewColumn Header="Производитель"
-                                            DisplayMemberBinding="{Binding Path=MedicineSuppliner.Name}"/>
+                                            DisplayMemberBinding="{Binding Path=MedicineSupplier.Name}"/>
                         </GridView>
                     </ListView.View>
                 </ListView>
@@ -86,6 +86,8 @@
                                             DisplayMemberBinding="{Binding Path=Date}"/>
                             <GridViewColumn Header="Статус"
                                             DisplayMemberBinding="{Binding Path=Status}"/>
+                            <GridViewColumn Header="Покупатель"
+                                            DisplayMemberBinding="{Binding Path=OrderCustomer.Full_name}"/>
                         </GridView>
                     </ListView.View>
                 </ListView>

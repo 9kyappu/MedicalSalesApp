@@ -16,7 +16,10 @@ namespace MedicalSalesApp.ViewModel
         private List<Customer> allCustomers = DataWorker.GetAllCustomers();
         public List<Customer> AllCustomers
         {
-            get { return allCustomers; }
+            get 
+            { 
+                return allCustomers; 
+            }
             set
             {
                 allCustomers = value;
@@ -39,19 +42,19 @@ namespace MedicalSalesApp.ViewModel
             }
         }
         ////все препараты в заказе
-        //private List<User> allUsers = DataWorker.GetAllUsers();
-        //public List<User> AllUsers
-        //{
-        //    get
-        //    {
-        //        return allUsers;
-        //    }
-        //    private set
-        //    {
-        //        allUsers = value;
-        //        NotifyPropertyChanged("AllUsers");
-        //    }
-        //}
+        private List<MedicineOrder> allMedicineOrders = DataWorker.GetAllMedicineOrders();
+        public List<MedicineOrder> AllMedicineOrders
+        {
+            get
+            {
+                return allMedicineOrders;
+            }
+            private set
+            {
+                allMedicineOrders = value;
+                NotifyPropertyChanged("AllMedicineOrders");
+            }
+        }
 
         //все заказы
         private List<Order> allOrders = DataWorker.GetAllOrders();
@@ -78,7 +81,7 @@ namespace MedicalSalesApp.ViewModel
             private set
             {
                 allSuppliers = value;
-                NotifyPropertyChanged("AllSupplier");
+                NotifyPropertyChanged("AllSuppliers");
             }
         }
 
@@ -645,7 +648,7 @@ namespace MedicalSalesApp.ViewModel
             // для заказа
             OrderStatus = null;
             OrderCustomer = null;
-            OrderDate = new DateTime();
+            OrderDate = DateTime.Today;
             // для изготовителя
             SupplierName = null;
             SupplierPhone = null;
@@ -659,6 +662,7 @@ namespace MedicalSalesApp.ViewModel
             UpdateAllMedicineView();
             UpdateAllSuppliersView();
             UpdateAllOrdersView();
+            UpdateAllMedicineOrdersView();
         }
 
         private void UpdateAllCustomersView()
@@ -693,14 +697,14 @@ namespace MedicalSalesApp.ViewModel
             MainWindow.AllOrdersView.ItemsSource = AllOrders;
             MainWindow.AllOrdersView.Items.Refresh();
         }
-        //private void UpdateAllMedicineOrdersView()
-        //{
-        //    AllMedi = DataWorker.GetAllSuppliers();
-        //    MainWindow.AllSuppliersView.ItemsSource = null;
-        //    MainWindow.AllSuppliersView.Items.Clear();
-        //    MainWindow.AllSuppliersView.ItemsSource = AllSuppliers;
-        //    MainWindow.AllSuppliersView.Items.Refresh();
-        //}
+        private void UpdateAllMedicineOrdersView()
+        {
+            allMedicineOrders = DataWorker.GetAllMedicineOrders();
+            MainWindow.AllMedicineOrdersView.ItemsSource = null;
+            MainWindow.AllMedicineOrdersView.Items.Clear();
+            MainWindow.AllMedicineOrdersView.ItemsSource = AllMedicineOrders;
+            MainWindow.AllMedicineOrdersView.Items.Refresh();
+        }
 
         #endregion
 

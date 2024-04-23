@@ -17,7 +17,7 @@ namespace MedicalSalesApp.Model.Data
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=MedicalSalesAppDB2;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=MedicalSalesAppDB5;Trusted_Connection=True;");
         }
     }
 }

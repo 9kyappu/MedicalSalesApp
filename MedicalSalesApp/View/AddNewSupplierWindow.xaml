@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MedicalSalesApp.View"
         mc:Ignorable="d"
-        Title="Добавление изготовителя" Height="300" Width="300">
+        Title="Добавление изготовителя" Height="300" Width="300"
+        Name="AddNewSupplierWnd">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>

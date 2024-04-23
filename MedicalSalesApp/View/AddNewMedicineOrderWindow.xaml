@@ -18,7 +18,7 @@
                     Width="200">
             <TextBlock Text="Номер заказа"/>
             <ComboBox ItemsSource="{Binding AllOrders}"
-                      DisplayMemberPath="OrderNum"
+                      DisplayMemberPath="Id"
                       SelectedItem="{Binding MedicineOrderOrder}"/>
             <TextBlock Text="Название препарата"/>
             <ComboBox ItemsSource="{Binding AllMedicines}"

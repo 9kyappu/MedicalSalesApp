@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:MedicalSalesApp.View" 
         xmlns:sys="clr-namespace:System;assembly=System.Runtime"
         mc:Ignorable="d"
-        Title="Добавление заказа" Height="300" Width="300">
+        Title="Добавление заказа" Height="300" Width="300"
+        Name="AddNewOrderWnd">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -25,7 +26,7 @@
             </ComboBox>
             <TextBlock Text="Покупатель"/>
             <ComboBox ItemsSource="{Binding AllCustomers}"
-                      DisplayMemberPath="Name"
+                      DisplayMemberPath="Full_name"
                       SelectedItem="{Binding OrderCustomer}"
                       Margin="3"/>
             <TextBlock Text="Дата оформления заказа"/>
