@@ -11,6 +11,7 @@ namespace MedicalSalesApp
     /// <summary>
     /// Логика взаимодействия для App.xaml
     /// </summary>
+    /// короче это отчаяние и это комментарий ради комментария
     public partial class App : Application
     {
     }
