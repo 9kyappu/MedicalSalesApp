@@ -1,4 +1,5 @@
-﻿using MedicalSalesApp.ViewModel;
+﻿using MedicalSalesApp.Model;
+using MedicalSalesApp.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;

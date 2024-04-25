@@ -14,6 +14,5 @@ namespace MedicalSalesApp.View
             InitializeComponent();
             DataContext = new DataManageVM();
         }
-        public DateTime SelectedDate { get; set; }
     }
 }
