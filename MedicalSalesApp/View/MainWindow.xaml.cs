@@ -30,10 +30,7 @@ namespace MedicalSalesApp.View
         {
             InitializeComponent();
             DataContext = new DataManageVM();
-            AllCustomersView = ViewAllCustomers;
             AllMedicinesView = ViewAllMedicines;
-            AllMedicineOrdersView = ViewAllMedicineOrders;
-            AllOrdersView = ViewAllOrders;
             AllSuppliersView = ViewAllSuppliers;
         }
     }

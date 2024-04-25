@@ -7,9 +7,6 @@ namespace MedicalSalesApp.Model.Data
     {
         public DbSet<Medicine> Medicines { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
-        public DbSet<Order> Orders { get; set; }
-        public DbSet<Customer> Customers { get; set; }
-        public DbSet<MedicineOrder> MedicineOrders { get; set; }
 
         public ApplicationContext()
         {
